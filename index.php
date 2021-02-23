@@ -27,6 +27,13 @@ require 'PostgreSQLFactory/DBPostgeConnection/DBPostgreConnection.php';
 require 'PostgreSQLFactory/DBPostgeConnection/DBGoodsConnection.php';
 require 'PostgreSQLFactory/DBPostgeConnection/DBSuppliersConnection.php';
 
+require 'PostgreSQLFactory/PostgreSQLQueryBuilder/Pieces/PostgreDBName.php';
+require 'PostgreSQLFactory/PostgreSQLQueryBuilder/Pieces/PostgreTableName.php';
+require 'PostgreSQLFactory/PostgreSQLQueryBuilder/Pieces/PostgreRequest.php';
+
+require 'PostgreSQLFactory/PostgreSQLQueryBuilder/PostgreQuery.php';
+require 'PostgreSQLFactory/PostgreSQLQueryBuilder/PostgreQueryBuilder.php';
+
 
 
 echo '<pre>';
@@ -68,4 +75,21 @@ function PostgreConnect(DBPostgreConnection $DBPostgreConnection)
 PostgreConnect(new DBSuppliersConnection());
 PostgreConnect(new DBGoodsConnection());
 
+echo '<p style="color: blueviolet">Объект добавленный PostgreSQLNewQueryBuilder</p>';
+
+function PostgreSQLNewQueryBuild(PostgreDBName $dbName, PostgreTableName $tableName, PostgreRequest $request)
+{
+    $queryBuilder = new PostgreQueryBuilder();
+    $queryBuilder->setDBName($dbName);
+    $queryBuilder->setTableName($tableName);
+    $queryBuilder->setRequest($request);
+
+    $query = $queryBuilder->build();
+
+    var_dump($query);
+}
+
+PostgreSQLNewQueryBuild(new PostgreDBName(), new PostgreTableName(), new PostgreRequest());
+
+echo '<h2 style="color: blue">Работа с СУБД Oracle</h2>';
 

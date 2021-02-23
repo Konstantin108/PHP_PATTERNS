@@ -1,6 +1,10 @@
 <?php
+namespace  app\OracleFactory\OracleConnection;
 
-
+use app\OracleFactory\OracleDelete\OracleDelete;
+use app\OracleFactory\OracleDelete\DBBooksDelete;
+use app\OracleFactory\DataBases\DBBooks;
+use app\OracleFactory\DataBases\OracleDatabase;
 class DBBooksConnection extends OracleConnection
 {
     protected function createOracleDataBase(): OracleDatabase

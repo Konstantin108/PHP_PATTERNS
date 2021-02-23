@@ -1,5 +1,5 @@
 <?php
-
+namespace app\PostgreSQLFactory\DataBases;
 
 class DBSuppliers extends PostgreSQLDataBase
 {

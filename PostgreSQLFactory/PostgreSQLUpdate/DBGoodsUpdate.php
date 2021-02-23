@@ -1,5 +1,5 @@
 <?php
-
+namespace app\PostgreSQLFactory\PostgreSQLUpdate;
 
 class DBGoodsUpdate extends PostgreSQLUpdate
 {

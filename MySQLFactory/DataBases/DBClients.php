@@ -1,5 +1,5 @@
 <?php
-
+namespace app\MySQLFactory\DataBases;
 
 class DBClients extends MySQLDataBase
 {

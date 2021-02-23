@@ -1,5 +1,5 @@
 <?php
-
+namespace app\MySQLFactory\MySQLQueryBuilder\Pieces;
 
 class TableName
 {

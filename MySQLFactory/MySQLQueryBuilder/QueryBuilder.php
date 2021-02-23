@@ -1,6 +1,9 @@
 <?php
+namespace app\MySQLFactory\MySQLQueryBuilder;
 
-
+use app\MySQLFactory\MySQLQueryBuilder\Pieces\DBName;
+use app\MySQLFactory\MySQLQueryBuilder\Pieces\Request;
+use app\MySQLFactory\MySQLQueryBuilder\Pieces\TableName;
 class QueryBuilder
 {
     protected $dbName;

@@ -1,5 +1,5 @@
 <?php
-
+namespace app\PostgreSQLFactory\DataBases;
 
 abstract class PostgreSQLDataBase
 {

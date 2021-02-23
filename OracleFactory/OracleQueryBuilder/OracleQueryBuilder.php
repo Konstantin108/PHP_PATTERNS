@@ -1,6 +1,9 @@
 <?php
+namespace  app\OracleFactory\OracleQueryBuilder;
 
-
+use app\OracleFactory\OracleQueryBuilder\Pieces\OracleDBName;
+use app\OracleFactory\OracleQueryBuilder\Pieces\OracleRequest;
+use app\OracleFactory\OracleQueryBuilder\Pieces\OracleTableName;
 class OracleQueryBuilder
 {
     protected $dbName;

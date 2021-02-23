@@ -1,6 +1,8 @@
 <?php
+namespace  app\OracleFactory\OracleConnection;
 
-
+use app\OracleFactory\OracleDelete\OracleDelete;
+use app\OracleFactory\DataBases\OracleDatabase;
 abstract class OracleConnection
 {
     private $oracleDataBase;

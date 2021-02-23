@@ -1,5 +1,5 @@
 <?php
-
+namespace app\MySQLFactory\MySQLDBRecord;
 
 class DBClientsRecord extends MySQLDBRecord
 {

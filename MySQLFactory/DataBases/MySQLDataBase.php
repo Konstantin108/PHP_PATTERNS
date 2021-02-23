@@ -1,5 +1,5 @@
 <?php
-
+namespace app\MySQLFactory\DataBases;
 
 abstract class MySQLDataBase
 {

@@ -1,5 +1,5 @@
 <?php
-
+namespace  app\OracleFactory\DataBases;
 
 abstract class OracleDatabase
 {

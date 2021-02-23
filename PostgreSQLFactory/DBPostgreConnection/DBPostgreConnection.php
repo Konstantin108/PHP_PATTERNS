@@ -1,6 +1,8 @@
 <?php
+namespace app\PostgreSQLFactory\DBPostgreConnection;
 
-
+use app\PostgreSQLFactory\PostgreSQLUpdate\PostgreSQLUpdate;
+use app\PostgreSQLFactory\DataBases\PostgreSQLDataBase;
 abstract class DBPostgreConnection
 {
     private $postgreSQLDataBase;

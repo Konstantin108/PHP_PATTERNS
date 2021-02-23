@@ -1,5 +1,5 @@
 <?php
-
+namespace  app\OracleFactory\OracleDelete;
 
 class DBCarsDelete extends OracleDelete
 {

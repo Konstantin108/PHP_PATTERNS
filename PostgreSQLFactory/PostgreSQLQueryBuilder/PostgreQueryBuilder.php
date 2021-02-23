@@ -1,6 +1,9 @@
 <?php
+namespace app\PostgreSQLFactory\PostgreSQLQueryBuilder;
 
-
+use app\PostgreSQLFactory\PostgreSQLQueryBuilder\Pieces\PostgreDBName;
+use app\PostgreSQLFactory\PostgreSQLQueryBuilder\Pieces\PostgreTableName;
+use app\PostgreSQLFactory\PostgreSQLQueryBuilder\Pieces\PostgreRequest;
 class PostgreQueryBuilder
 {
     protected $dbName;

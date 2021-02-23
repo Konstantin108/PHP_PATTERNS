@@ -1,6 +1,10 @@
 <?php
+namespace app\PostgreSQLFactory\DBPostgreConnection;
 
-
+use app\PostgreSQLFactory\PostgreSQLUpdate\PostgreSQLUpdate;
+use app\PostgreSQLFactory\PostgreSQLUpdate\DBSuppliersUpdate;
+use app\PostgreSQLFactory\DataBases\DBSuppliers;
+use app\PostgreSQLFactory\DataBases\PostgreSQLDataBase;
 class DBSuppliersConnection extends DBPostgreConnection
 {
     protected function createDataBasePostgre(): PostgreSQLDataBase

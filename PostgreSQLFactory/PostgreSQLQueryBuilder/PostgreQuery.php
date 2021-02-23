@@ -1,5 +1,5 @@
 <?php
-
+namespace app\PostgreSQLFactory\PostgreSQLQueryBuilder;
 
 class PostgreQuery
 {

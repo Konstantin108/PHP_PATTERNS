@@ -1,5 +1,5 @@
 <?php
-
+namespace app\PostgreSQLFactory\DataBases;
 
 class DBGoods extends PostgreSQLDataBase
 {

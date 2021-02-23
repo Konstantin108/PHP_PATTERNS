@@ -1,5 +1,8 @@
 <?php
+namespace app\MySQLFactory\DBMySQLConnection;
 
+use app\MySQLFactory\MySQLDBRecord\MySQLDBRecord;
+use app\MySQLFactory\DataBases\MySQLDataBase;
 abstract class DBMySQLConnection
 {
     private $mySQLDataBase;

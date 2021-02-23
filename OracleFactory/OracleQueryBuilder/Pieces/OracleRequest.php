@@ -1,5 +1,5 @@
 <?php
-
+namespace  app\OracleFactory\OracleQueryBuilder\Pieces;
 
 class OracleRequest
 {

@@ -17,6 +17,8 @@ require 'MySQLFactory/MySQLQueryBuilder/Pieces/TableName.php';
 require 'MySQLFactory/MySQLQueryBuilder/Query.php';
 require 'MySQLFactory/MySQLQueryBuilder/QueryBuilder.php';
 
+echo '<pre>';
+
 echo '<h1 style="color: red">Домашнее задание №4</h1>';
 echo '<h2 style="color: blue">Работа с СУБД MySQL</h2>';
 
@@ -28,6 +30,8 @@ function MySQLConnect(DBMySQLConnection $DBMySQLConnection)
 MySQLConnect(new DBClientsConnection());
 MySQLConnect(new DBUsersConnection());
 
+echo '<p style="color: blueviolet">Объект добавленный MySQLQueryBuilder</p>';
+
 function MySQLNewQueryBuild(DBName $dbName, TableName $tableName, Request $request)
 {
     $queryBuilder = new QueryBuilder();
@@ -37,7 +41,6 @@ function MySQLNewQueryBuild(DBName $dbName, TableName $tableName, Request $reque
 
     $query = $queryBuilder->build();
 
-    echo '<pre>';
     var_dump($query);
 }
 

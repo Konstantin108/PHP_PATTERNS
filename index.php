@@ -15,5 +15,12 @@ function MySQLConnect(DBMySQLConnection $DBMySQLConnection)
     $DBMySQLConnection->getConnect();
 }
 
+function MySQLRecord(DBMySQLConnection $DBMySQLConnection)
+{
+    $DBMySQLConnection->getRecord();
+}
+
 MySQLConnect(new DBClientsConnection());
 MySQLConnect(new DBUsersConnection());
+
+MySQLRecord(new DBClientsConnection());

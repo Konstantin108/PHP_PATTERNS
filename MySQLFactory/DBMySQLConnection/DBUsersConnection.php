@@ -8,4 +8,9 @@ class DBUsersConnection extends DBMySQLConnection
         echo 'Подключение к базе пользовательских данных' . '<br>';
         return new DBUsers();
     }
+
+    protected function createMySQLDBRecord(): MySQLDBRecord
+    {
+        return new DBUsersRecord();
+    }
 }

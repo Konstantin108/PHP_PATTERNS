@@ -8,4 +8,9 @@ class DBClientsConnection extends DBMySQLConnection
         echo 'Подключение к базе клиентских данных' . '<br>';
         return new DBClients();
     }
+
+    protected function createMySQLDBRecord(): MySQLDBRecord
+    {
+        return new DBClientsRecord();
+    }
 }

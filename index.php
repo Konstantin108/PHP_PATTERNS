@@ -17,6 +17,15 @@ require 'MySQLFactory/MySQLQueryBuilder/Pieces/TableName.php';
 require 'MySQLFactory/MySQLQueryBuilder/Query.php';
 require 'MySQLFactory/MySQLQueryBuilder/QueryBuilder.php';
 
+require 'PostgreSQLFactory/DataBases/PostgreSQLDataBase.php';
+require 'PostgreSQLFactory/DataBases/DBSuppliers.php';
+require 'PostgreSQLFactory/DataBases/DBGoods.php';
+require 'PostgreSQLFactory/DBPostgeConnection/DBPostgreConnection.php';
+require 'PostgreSQLFactory/DBPostgeConnection/DBGoodsConnection.php';
+require 'PostgreSQLFactory/DBPostgeConnection/DBSuppliersConnection.php';
+
+
+
 echo '<pre>';
 
 echo '<h1 style="color: red">Домашнее задание №4</h1>';
@@ -45,4 +54,15 @@ function MySQLNewQueryBuild(DBName $dbName, TableName $tableName, Request $reque
 }
 
 MySQLNewQueryBuild(new DBName(), new TableName(), new Request());
+
+echo '<h2 style="color: blue">Работа с СУБД PostgreSQL</h2>';
+
+function PostgreConnect(DBPostgreConnection $DBPostgreConnection)
+{
+    $DBPostgreConnection->getPostgreConnect();
+}
+
+PostgreConnect(new DBSuppliersConnection());
+PostgreConnect(new DBGoodsConnection());
+
 

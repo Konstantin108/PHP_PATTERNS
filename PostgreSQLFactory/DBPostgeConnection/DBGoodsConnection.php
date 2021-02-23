@@ -8,4 +8,9 @@ class DBGoodsConnection extends DBPostgreConnection
         echo 'Получение данных о товарах' . '<br>';
         return new DBGoods();
     }
+
+    protected function createPostgreSQLUpdate(): PostgreSQLUpdate
+    {
+        return new DBGoodsUpdate();
+    }
 }

@@ -8,4 +8,9 @@ class DBSuppliersConnection extends DBPostgreConnection
         echo 'Получение данных о поставщиках' . '<br>';
         return new DBSuppliers();
     }
+
+    protected function createPostgreSQLUpdate(): PostgreSQLUpdate
+    {
+        return new DBSuppliersUpdate();
+    }
 }

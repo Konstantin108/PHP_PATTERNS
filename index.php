@@ -34,7 +34,12 @@ require 'PostgreSQLFactory/PostgreSQLQueryBuilder/Pieces/PostgreRequest.php';
 require 'PostgreSQLFactory/PostgreSQLQueryBuilder/PostgreQuery.php';
 require 'PostgreSQLFactory/PostgreSQLQueryBuilder/PostgreQueryBuilder.php';
 
-
+require 'OracleFactory/OracleConnection/OracleConnection.php';
+require 'OracleFactory/OracleConnection/DBBooksConnection.php';
+require 'OracleFactory/OracleConnection/DBCarsConnection.php';
+require 'OracleFactory/DataBases/OracleDatabase.php';
+require 'OracleFactory/DataBases/DBBooks.php';
+require 'OracleFactory/DataBases/DBCars.php';
 
 echo '<pre>';
 
@@ -93,3 +98,10 @@ PostgreSQLNewQueryBuild(new PostgreDBName(), new PostgreTableName(), new Postgre
 
 echo '<h2 style="color: blue">Работа с СУБД Oracle</h2>';
 
+function OracleConnect(OracleConnection $oracleConnection)
+{
+    $oracleConnection->getOracleConnect();
+}
+
+OracleConnect(new DBBooksConnection());
+OracleConnect(new DBCarsConnection());

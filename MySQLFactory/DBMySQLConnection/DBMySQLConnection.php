@@ -15,10 +15,6 @@ abstract class DBMySQLConnection
     {
         echo 'Устанавливается соединение' . '<br>';
         $this->mySQLDataBase->connect();
-    }
-
-    public function getRecord()
-    {
         $this->mySQLDBRecord->record();
     }
 

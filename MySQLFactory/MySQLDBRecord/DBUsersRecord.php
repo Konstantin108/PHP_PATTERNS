@@ -5,6 +5,6 @@ class DBUsersRecord extends MySQLDBRecord
 {
     public function record()
     {
-        return 'произведена запись пользовательских данных' . '<br>';
+        echo '<p style="color: green">Произведена запись пользовательских данных</p><br>';
     }
 }

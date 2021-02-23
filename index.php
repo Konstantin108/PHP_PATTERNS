@@ -3,6 +3,9 @@
 require 'MySQLFactory/DBMySQLConnection/DBMySQLConnection.php';
 require 'MySQLFactory/DBMySQLConnection/DBClientsConnection.php';
 require 'MySQLFactory/DBMySQLConnection/DBUsersConnection.php';
+require 'MySQLFactory/MySQLDBRecord/MySQLDBRecord.php';
+require 'MySQLFactory/MySQLDBRecord/DBClientsRecord.php';
+require 'MySQLFactory/MySQLDBRecord/DBUsersRecord.php';
 require 'MySQLFactory/DataBases/MySQLDataBase.php';
 require 'MySQLFactory/DataBases/DBClients.php';
 require 'MySQLFactory/DataBases/DBUsers.php';
@@ -15,12 +18,5 @@ function MySQLConnect(DBMySQLConnection $DBMySQLConnection)
     $DBMySQLConnection->getConnect();
 }
 
-function MySQLRecord(DBMySQLConnection $DBMySQLConnection)
-{
-    $DBMySQLConnection->getRecord();
-}
-
 MySQLConnect(new DBClientsConnection());
 MySQLConnect(new DBUsersConnection());
-
-MySQLRecord(new DBClientsConnection());

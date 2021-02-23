@@ -5,6 +5,6 @@ class DBClientsRecord extends MySQLDBRecord
 {
     public function record()
     {
-        return 'клиентские данные были обновлены' . '<br>';
+        echo '<p style="color: green">Клиентские данные были обновлены</p><br>';
     }
 }

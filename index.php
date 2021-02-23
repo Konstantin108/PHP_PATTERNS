@@ -44,6 +44,13 @@ require 'OracleFactory/OracleDelete/OracleDelete.php';
 require 'OracleFactory/OracleDelete/DBBooksDelete.php';
 require 'OracleFactory/OracleDelete/DBCarsDelete.php';
 
+require 'OracleFactory/OracleQueryBuilder/Pieces/OracleDBName.php';
+require 'OracleFactory/OracleQueryBuilder/Pieces/OracleRequest.php';
+require 'OracleFactory/OracleQueryBuilder/Pieces/OracleTableName.php';
+
+require 'OracleFactory/OracleQueryBuilder/OracleQuery.php';
+require 'OracleFactory/OracleQueryBuilder/OracleQueryBuilder.php';
+
 echo '<pre>';
 
 echo '<h1 style="color: red">Домашнее задание №4</h1>';
@@ -108,3 +115,19 @@ function OracleConnect(OracleConnection $oracleConnection)
 
 OracleConnect(new DBBooksConnection());
 OracleConnect(new DBCarsConnection());
+
+echo '<p style="color: blueviolet">Объект добавленный OracleNewQueryBuilder</p>';
+
+function OracleNewQueryBuilder(OracleDBName $dbName, OracleTableName $tableName, OracleRequest $request)
+{
+    $queryBuilder = new OracleQueryBuilder();
+    $queryBuilder->setDBName($dbName);
+    $queryBuilder->setTableName($tableName);
+    $queryBuilder->setRequest($request);
+
+    $query = $queryBuilder->build();
+
+    var_dump($query);
+}
+
+OracleNewQueryBuilder(new OracleDBName(), new OracleTableName(), new OracleRequest());

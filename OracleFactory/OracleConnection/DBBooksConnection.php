@@ -8,4 +8,9 @@ class DBBooksConnection extends OracleConnection
         echo 'Подключение к базе данных - books' . '<br>';
         return new DBBooks();
     }
+
+    protected function createOracleDelete(): OracleDelete
+    {
+        return new DBBooksDelete();
+    }
 }

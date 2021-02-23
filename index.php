@@ -40,6 +40,9 @@ require 'OracleFactory/OracleConnection/DBCarsConnection.php';
 require 'OracleFactory/DataBases/OracleDatabase.php';
 require 'OracleFactory/DataBases/DBBooks.php';
 require 'OracleFactory/DataBases/DBCars.php';
+require 'OracleFactory/OracleDelete/OracleDelete.php';
+require 'OracleFactory/OracleDelete/DBBooksDelete.php';
+require 'OracleFactory/OracleDelete/DBCarsDelete.php';
 
 echo '<pre>';
 
